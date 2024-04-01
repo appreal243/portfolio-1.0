@@ -84,6 +84,7 @@ section {
 
 .home-img img {
   width: 34vw;
+  animation: melayang 4s ease-in-out infinite;
 }
 
 .home-content h1 {
@@ -372,7 +373,20 @@ span {
   color: var(--second-bg-color);
 }
 
+/* ANIMATION */
+@keyframes melayang {
+  0% {
+    transform: translateY(0);
+  }
 
+  50% {
+    transform: translateY(-2.4rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 
 /* BREAKPOINT */
 @media (max-width: 1200px) {
@@ -392,7 +406,7 @@ span {
 
   .services {
     padding-bottom: 7rem;
-  }  
+  }
 
   .portfolio {
     padding-bottom: 7rem;
