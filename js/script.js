@@ -63,18 +63,24 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
-ScrollReveal().reveal(
-  ".home-img, .services-container, .portfolio-box, .contact form",
-  { origin: "bottom" }
-);
-ScrollReveal().reveal(".home-content h1, .about-img", { origin: "left" });
-ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
+ScrollReveal().reveal(".home-img, .services-container, .portfolio-box, .contact form", { origin: "bottom" });
+ScrollReveal().reveal(".home-content h1", { origin: "left" });
+ScrollReveal().reveal(".home-content p", { origin: "right" });
+
+if (window.innerWidth < 768) {
+  ScrollReveal().reveal(".about-img", { origin: "bottom" });
+  ScrollReveal().reveal(".about-content", { origin: "top" });
+} else {
+  ScrollReveal().reveal(".about-img", { origin: "left" });
+  ScrollReveal().reveal(".about-content", { origin: "right" });
+}
+
 
 // Typed Js
 const typed = new Typed(".multiple-text", {
   strings: ["Frontend Developer", "UI/UX Design", "Backend Developer"],
-  typeSpeed: 100, 
+  typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
-  loop: true
+  loop: true,
 });
