@@ -78,7 +78,7 @@ if (window.innerWidth < 768) {
 
 // Typed Js
 const typed = new Typed(".multiple-text", {
-  strings: ["Frontend Developer", "UI/UX Design", "Backend Developer"],
+  strings: ["Frontend Developer", "UI/UX Design", "Web Developer"],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
