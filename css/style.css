@@ -96,10 +96,15 @@ section {
   font-size: 3.2rem;
   font-weight: 700;
   line-height: 1.3;
+  text-wrap: nowrap;
 }
 
 .home-content h3:nth-of-type(2) {
   margin-bottom: 2rem;
+}
+
+.home-content h3 br {
+  display: none;
 }
 
 span {
@@ -244,10 +249,12 @@ span {
   display: flex;
   overflow: hidden;
   border-radius: 2rem;
+  height: 25rem;
 }
 
 .portfolio-box img {
-  height: 25rem;
+  /* width: 100%; */
+  min-width: 100%;
   transition: 0.5s ease;
 }
 
@@ -511,6 +518,14 @@ span {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  .home-content h3 br {
+    display: inline;
+  }
+
+  .home-content h3 span {
+    font-size: 3.5rem;
   }
 
   .contact form .input-box input {
